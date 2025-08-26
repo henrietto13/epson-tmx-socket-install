@@ -66,8 +66,8 @@ func main() {
 	// enable the socket to start on boot, and start it immediately.
 	commands := [][]string{
 		{"systemctl", "daemon-reload"},
-		{"systemctl", "enable", "--now", "raw-printer.socket"},
-		{"systemctl", "restart", "raw-printer.socket"}, // Use restart to ensure it's fresh
+		{"systemctl", "enable", "--now", "epson-printer.socket"},
+		{"systemctl", "restart", "epson-printer.socket"}, // Use restart to ensure it's fresh
 	}
 
 	for _, cmdArgs := range commands {
@@ -80,6 +80,6 @@ func main() {
 		fmt.Printf("✓ Command successful.\n")
 	}
 
-	fmt.Println("\n🎉 Setup complete! The raw printer socket is active and enabled.")
+	fmt.Println("\n🎉 Setup complete! The epson printer socket is active and enabled.")
 	fmt.Println("The PC is now ready to accept print jobs on TCP port 9100.")
 }
