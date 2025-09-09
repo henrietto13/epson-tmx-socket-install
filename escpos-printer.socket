@@ -1,0 +1,9 @@
+[Unit]
+Description=ESC/POS Printer Socket
+
+[Socket]
+ListenStream=0.0.0.0:9100
+Accept=yes
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=ESC/POS Printer Service
+
+[Service]
+ExecStart=-/usr/bin/tee /dev/null > /dev/usb/lp0
+StandardInput=socket
